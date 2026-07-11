@@ -17,3 +17,40 @@ Content-Type: application/json
   "password": "123456"
 }
 
+### Create Organization
+POST http://localhost:8080/api/orgs
+Content-Type: application/json
+
+{
+  "name": "Test Org A"
+}
+
+### Create Team
+POST http://localhost:8080/api/orgs/1/teams
+Content-Type: application/json
+
+{
+  "name": "Backend Team"
+}
+
+### Get Teams
+GET http://localhost:8080/api/orgs/1/teams
+
+### Create Organization B 
+POST http://localhost:8080/api/orgs
+Content-Type: application/json
+
+{
+  "name": "Test Org B"
+}
+
+### Create Team for Org B
+POST http://localhost:8080/api/orgs/2/teams
+Content-Type: application/json
+
+{
+  "name": "Marketing Team"
+}
+
+### Get Teams for Org B
+GET http://localhost:8080/api/orgs/2/teams
